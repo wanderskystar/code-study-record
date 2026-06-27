@@ -37,4 +37,37 @@ int appendElem(SeqList*L,ElemType e){
     L->length++;
     return 1;
 }
+//遍历顺序表
+void display(SeqList *L){
+    //判断表是否为空
+    if(L->length==0){
+        printf("表为空");
+    }
 
+    for(int i=0; i < L->length; i++){
+        printf("%d",L->data[i]);
+    }
+    printf("\n");
+}
+//指定位置插入元素e
+int insertElem(SeqList *L,int pos ,ElemType e){
+    if(L->length == MAXSIZE){
+        printf("表满了");
+        return 0;
+    }
+    if(pos<1 || pos > length-1){
+        printf("位置错误");
+        return 0;
+    }
+    for(int i=L->length; i > pos-1; i--){
+        L->data[i+1] = L->data[i];   //往后挪一个位置
+    }
+    L->data[pos-1]=e;                //pos-1是数组的真实下标
+    L->length++;
+    return 1;
+}
+//删除指定位置的元素
+int deleteElem(SeqList *L,int pos,ElemType *e){  //用指针*e存饭删除的值
+
+
+}
