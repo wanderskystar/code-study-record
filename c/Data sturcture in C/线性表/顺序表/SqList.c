@@ -68,6 +68,26 @@ int insertElem(SeqList *L,int pos ,ElemType e){
 }
 //删除指定位置的元素
 int deleteElem(SeqList *L,int pos,ElemType *e){  //用指针*e存饭删除的值
+    if (L->length == 0){
+        printf("表为空");
+        return 0;
+    }
 
+    if(pos<1 || pos > L->length){
+        printf("位置不对");
+        return 0;
+    }
 
+    int i;
+    *e = L->data[pos-1];  //指针把被删掉的值带出来
+    for(i=pos; i <= L->length-1 ; i++){
+        L->data[i-1]  =  L->data[i];  //注意pos的逻辑顺序和数组下标
+    }
+    L->length--;
+    return 1;
+
+}
+
+int main(){
+    SeqList list;
 }
