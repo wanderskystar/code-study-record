@@ -7,7 +7,7 @@
 
 //定义有序表结构体 SSTable
 typedef struct{
-    ElemType *R;
+    ElemType *R;  //0号单元用作监视哨
     int length;
 }SSTable;
 //关键字域ElemType
