@@ -25,8 +25,10 @@ print(x(1,2))
 3. 定义函数info(name, age=18)
 格式化输出姓名年龄，分别使用传参、
 不传年龄两种方式调用
-'''
+
 def info(name,age=18):
     print(f"{name},{age}")
 info("小明",20)
 info("小名")
+
+'''
