@@ -57,6 +57,7 @@ s1 = Student("123456")
 # print(s1.__sid) # AttributeError，禁止直接读取
 
 # 2.通过公共方法正常获取学号
+
 print(s1.get_sid())
 
 '''

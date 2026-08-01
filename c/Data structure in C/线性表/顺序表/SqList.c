@@ -90,4 +90,5 @@ int deleteElem(SeqList *L,int pos,ElemType *e){  //用指针*e存饭删除的值
 
 int main(){
     SeqList list;
+    
 }
